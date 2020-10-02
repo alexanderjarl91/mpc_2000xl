@@ -6,6 +6,9 @@
     padding: 0;
     
 }
+body{
+    min-width: 725px;
+}
 h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
