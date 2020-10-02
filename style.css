@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    
+}
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.container {
+    display:flex;
+    justify-content: center;;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+
+h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.3rem;
+    color:white;
+    margin-bottom: 1rem;
+    margin-top: -29.5rem;
+    margin-right: 15rem;
+
+}
+
+.padRow1{
+    widows: 100%;
+    display: flex;
+    justify-content: center;;
+    text-align: center;
+    align-items: center;
+    margin-left:18.6rem;
+    margin-top: 5.5rem;
+}
+
+.padRow1 > div{
+    
+    height: 38px;
+    width:38px;
+    margin:0.5rem;
+}
+
+.padRow2{
+    widows: 100%;
+    display: flex;
+    justify-content: center;;
+    text-align: center;
+    align-items: center;
+    margin-left:18.6rem;
+}
+
+.padRow2 > div{
+    height: 38px;
+    width:38px;
+    margin:0.5rem;
+}
+
+.padRow3{
+    widows: 100%;
+    display: flex;
+    justify-content: center;;
+    text-align: center;
+    align-items: center;
+    margin-left:18.6rem;
+}
+
+.padRow3 > div{
+    height: 38px;
+    width:38px;
+    margin:0.5rem;
+}
+
+.padRow4{
+    widows: 100%;
+    display: flex;
+    justify-content: center;;
+    text-align: center;
+    align-items: center;
+    margin-left:18.6rem;
+}
+
+.padRow4 > div{
+    height: 38px;
+    width:38px;
+    margin:0.5rem;
+}
