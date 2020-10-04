@@ -25,6 +25,7 @@ h2 {
 
 
 .container {
+
     display:flex;
     justify-content: center;;
     flex-direction: column;
@@ -55,8 +56,7 @@ h3{
     margin-top: 5.5rem;
 }
 
-.padRow1 > div{
-    
+.padRow1 > div{ 
     height: 38px;
     width:38px;
     margin:0.5rem;
@@ -106,3 +106,48 @@ h3{
     width:38px;
     margin:0.5rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    position: relative;
+}
+    
+.img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .pads {
+      position: absolute;
+      top: 40%;
+      left: 56.8%;
+      width: 20%;
+      
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 0.5rem;
+
+    }
+  
+      .pads > div {
+        display: inline-block;
+        height: 2.78rem;
+        width: 2.78rem;
+        background: gold;
+        box-shadow: inset 0 0 0 1px black;
+
+      }
