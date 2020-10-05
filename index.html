@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>AKAI MPC2000XL</h1>
+    <div class="headerTxt" id="headerTxt">
+        <h1 class="headline">AKAI MPC2000XL</h1>
         <h2>A javascript tribute to the legendary sampler</h2>
-        
+    </div>
 
-        <div class="container">  
+    <div class="intro">
+        <p>Back in the days, hip-hop music was created by chopping up bits and pieces of old records 
+            and rearranging them to make a beat. Some of the greatest producers of that era used an 
+            Akai MPC to chop sounds and arranging them into a sequence. </p>
+        <button class = "try">Try the MPC2000XL</button>
+    </div>
+
+    <div class="container">
+        <div class="container" id="mpc">  
             <img src="/images/mpc.png" />
+            <h3 id="push">push pads..</h3>
               
             <div class="pads">
                 <div class="pad1">
@@ -65,25 +74,44 @@
                     <audio class="sound" src="audio/crash.wav"></audio>
                 </div>
             </div>
-                
-                
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="playBtn" id="playBtn">
+                <audio id="song" src="audio/backingtrack.mp3"></audio>
+                <img class="playLight" id="playLight" src="images/onLight.png" alt="">
             </div>
-          </div>
+            
+            <div class="stopBtn" id="stopBtn">
+            </div>
+            <button class="myBtn" id="myBtn">User Manual</button>
+        </div>
+
+
+
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>MPC2000XL USER MANUAL</p>
+    <p>----------------------</p>
+    <br><br>
+
+    <p class="modalText">
+         1. You either use your mouse to click the pads or use the assigned keys on your keyboard.<br><br><br>
+        2. You can click the play button (or hit spacebar) for a backing track.
+        <br><br><br>
+        3. You can click the stop button (or hit spacebar again) to stop the backing track.
+        <br><br><br><br><br>
+        This application was created to play around with my daughter and show her the basic mechanics of a drum machine and sampler. <br><br><br>
+    </p> <br>
+    <p>ENJOY!</p>
+
+  </div>
+
+</div>
+<div class="footer">
+<p>Created by Alexander Jarl | alexanderjarl91@gmail.com | 2020</p>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

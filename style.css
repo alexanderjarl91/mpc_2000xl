@@ -9,29 +9,69 @@
 body{
     min-width: 725px;
 }
+/* HEADER */
+.headerTxt {
+    text-align: center;
+}
 h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 3rem;
-    margin-top: 5rem;
+    margin-top: 25rem;
     margin-bottom: 0;
+
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 2s ease-out;
 }
 
 h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 1rem;
     margin-bottom: 1rem;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 2s ease-out;
 }
 
+/* INTRO TEXT */
+.intro {
+max-width: 25rem;
+margin: 0 auto;
+margin-top: -10rem;
+text-align: center;
 
+opacity: 0;
+transition: opacity 2s 
+}
 
+p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+
+.try {
+    font-family: 'Press Start 2P', cursive;
+    margin: 2rem;
+    border: none;
+    background:lightgray; 
+}
+
+.try:hover {
+    background: lightgray;
+    cursor: pointer;
+
+}
+
+/* MPC */
 .container {
-
+    position: relative;
     display:flex;
     justify-content: center;;
     flex-direction: column;
     text-align: center;
     align-items: center;
     margin: 0 auto;
+    
+    transition: transform 5s ease-out;
+    opacity: 1;
 }
 
 
@@ -41,99 +81,22 @@ h3{
     font-size: 0.3rem;
     color:white;
     margin-bottom: 1rem;
-    margin-top: -29.5rem;
+    margin-top: -29.4rem;
     margin-right: 15rem;
 
 }
 
-.padRow1{
-    widows: 100%;
-    display: flex;
-    justify-content: center;;
-    text-align: center;
-    align-items: center;
-    margin-left:18.6rem;
-    margin-top: 5.5rem;
-}
 
-.padRow1 > div{ 
-    height: 38px;
-    width:38px;
-    margin:0.5rem;
-}
-
-.padRow2{
-    widows: 100%;
-    display: flex;
-    justify-content: center;;
-    text-align: center;
-    align-items: center;
-    margin-left:18.6rem;
-}
-
-.padRow2 > div{
-    height: 38px;
-    width:38px;
-    margin:0.5rem;
-}
-
-.padRow3{
-    widows: 100%;
-    display: flex;
-    justify-content: center;;
-    text-align: center;
-    align-items: center;
-    margin-left:18.6rem;
-}
-
-.padRow3 > div{
-    height: 38px;
-    width:38px;
-    margin:0.5rem;
-}
-
-.padRow4{
-    widows: 100%;
-    display: flex;
-    justify-content: center;;
-    text-align: center;
-    align-items: center;
-    margin-left:18.6rem;
-}
-
-.padRow4 > div{
-    height: 38px;
-    width:38px;
-    margin:0.5rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container {
-    position: relative;
-}
     
-.img {
+.container img {
       width: 100%;
       height: auto;
     }
     
-    .pads {
+.pads {
       position: absolute;
-      top: 40%;
-      left: 56.8%;
+      top: 166.4%;
+      left: 56.9%;
       width: 20%;
       
       
@@ -141,13 +104,131 @@ h3{
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 0.5rem;
 
-    }
+}
   
-      .pads > div {
+.pads > div {
         display: inline-block;
         height: 2.78rem;
         width: 2.78rem;
-        background: gold;
-        box-shadow: inset 0 0 0 1px black;
+        /*   */
 
-      }
+}
+
+.pads > div:hover {
+    cursor: pointer;
+}
+
+.playBtn {
+    
+    height: 1.1rem;
+    width:1.4rem;
+    /* margin-top: 18.1rem;
+    margin-right: 10.7rem; */
+    position: absolute;
+    top: 305%;
+    left: 36.5%;
+}
+.playBtn:hover {
+    cursor: pointer;
+}
+
+.playLight{
+    position: relative;
+
+    top: -100%;
+    left: -40%;
+
+}
+
+.stopBtn {   
+    height: 1.1rem;
+    width:1.4rem;
+    /* margin-top: 18.1rem;
+    margin-right: 10.7rem; */
+    position: absolute;
+    top: 305%;
+    left: 31.8%;
+}
+
+.stopBtn {
+    cursor: pointer;
+}
+
+
+
+
+/* MODAL STUFF */
+
+.myBtn {
+    position: absolute;
+    top: 380%;
+    left: 43%;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+.myBtn:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.modalText {
+    font-size:10px;
+    text-align: left;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+ 
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+  }
+  
+  .modalText {
+      max-width: 30rem;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  
+/* FOOTER */
+
+.footer{
+    position:fixed;bottom:0;
+    width:100%;
+    display:block;
+    margin-bottom: 2rem;
+}
+
+.footer p {
+    font-size: 10px;
+}
