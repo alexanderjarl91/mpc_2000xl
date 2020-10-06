@@ -1,234 +1,265 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 * {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
-body{
-    min-width: 725px;
+@media (min-width: 600px) {
+  html {
+    overflow: hidden;
+  }
 }
+
 /* HEADER */
 .headerTxt {
-    text-align: center;
+  text-align: center;
 }
 h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
-    margin-top: 25rem;
-    margin-bottom: 0;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  margin-top: 25rem;
+  margin-bottom: 0;
 
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 2s ease-out;
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 2s ease-out;
 }
 
 h2 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 2s ease-out;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 2s ease-out;
 }
 
 /* INTRO TEXT */
 .intro {
-max-width: 25rem;
-margin: 0 auto;
-margin-top: -10rem;
-text-align: center;
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-top: -10rem;
 
-opacity: 0;
-transition: opacity 2s 
+  opacity: 0;
+  transition: opacity 2s;
 }
 
 p {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .try {
-    font-family: 'Press Start 2P', cursive;
-    margin: 2rem;
-    border: none;
-    background:lightgray; 
+  font-family: "Press Start 2P", cursive;
+  margin: 2rem 5rem;
+  border: none;
+  background: lightgray;
 }
 
 .try:hover {
-    background: lightgray;
-    cursor: pointer;
-
+  background: lightgray;
+  cursor: pointer;
 }
 
 /* MPC */
 .container {
-    position: relative;
-    display:flex;
-    justify-content: center;;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
-    
-    transition: transform 5s ease-out;
-    opacity: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  max-height: 50px;
 }
 
-
-
-h3{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.3rem;
-    color:white;
-    margin-bottom: 1rem;
-    margin-top: -29.4rem;
-    margin-right: 15rem;
-
+.mpc {
+  position: relative;
+  transition: opacity 1s ease-out, transform 2s ease-out;
+  opacity: 0;
 }
 
+h3 {
+  position: absolute;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.3rem;
+  color: white;
+  top: 20%;
+  left: 28.9%;
+}
 
-    
-.container img {
-      width: 100%;
-      height: auto;
-    }
-    
+.mpc img {
+  width: 100%;
+  height: auto;
+}
+
 .pads {
-      position: absolute;
-      top: 166.4%;
-      left: 56.9%;
-      width: 20%;
-      
-      
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 0.5rem;
-
+  position: absolute;
+  top: 39.9%;
+  left: 56.9%;
+  width: 28%;
+  height: 34%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4%;
 }
-  
-.pads > div {
-        display: inline-block;
-        height: 2.78rem;
-        width: 2.78rem;
-        /*   */
 
+.pads > div {
+  background-color: yellow;
+  display: inline-block;
 }
 
 .pads > div:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .playBtn {
-    
-    height: 1.1rem;
-    width:1.4rem;
-    /* margin-top: 18.1rem;
+  height: 2.5%;
+  width: 2.8%;
+  /* margin-top: 18.1rem;
     margin-right: 10.7rem; */
-    position: absolute;
-    top: 305%;
-    left: 36.5%;
+  position: absolute;
+  top: 73%;
+  left: 36.5%;
 }
 .playBtn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.playLight{
-    position: relative;
-
-    top: -100%;
-    left: -40%;
-
-}
-
-.stopBtn {   
-    height: 1.1rem;
-    width:1.4rem;
-    /* margin-top: 18.1rem;
-    margin-right: 10.7rem; */
-    position: absolute;
-    top: 305%;
-    left: 31.8%;
+.playLight {
+  position: relative;
+  top: -100%;
+  left: -40%;
 }
 
 .stopBtn {
-    cursor: pointer;
+  height: 2.6%;
+  width: 3%;
+  /* margin-top: 18.1rem;
+    margin-right: 10.7rem; */
+  position: absolute;
+  top: 73%;
+  left: 31.8%;
 }
 
-
-
+.stopBtn {
+  cursor: pointer;
+}
 
 /* MODAL STUFF */
 
 .myBtn {
-    position: absolute;
-    top: 380%;
-    left: 43%;
-    border: none;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 10px;
+  position: absolute;
+  top: 90%;
+  left: 42%;
+  border: none;
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
 }
 .myBtn:hover {
-    background-color: lightgray;
-    cursor: pointer;
+  background-color: lightgray;
+  cursor: pointer;
 }
 
 .modalText {
-    font-size:10px;
-    text-align: left;
+  font-size: 10px;
+  text-align: left;
 }
 
-
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    
-  }
-  
- 
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%; 
-  }
-  
-  .modalText {
-      max-width: 30rem;
-  }
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
 
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
 
+.modalText {
+  max-width: 30rem;
+}
 
-  
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* FOOTER */
 
-.footer{
-    position:fixed;bottom:0;
-    width:100%;
-    display:block;
-    margin-bottom: 2rem;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .footer p {
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 30px;
+    margin-top: 25rem;
+    margin-bottom: 0;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 2s ease-out;
+  }
+
+  h2 {
+    font-size: 6px;
+  }
+
+  .intro {
+    margin: 0 auto;
+  }
+
+  .intro p {
+    max-width: 12rem;
     font-size: 10px;
+    margin: 0 auto;
+    margin-top: -18rem;
+  }
+
+  .myBtn {
+    margin-top: 2rem;
+    left: 38%;
+  }
+
+  .try {
+    font-size: 10px;
+    margin-left: 7rem;
+  }
+  .mpc {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-height: 510px) {
+  .footer {
+    display: none;
+  }
 }
