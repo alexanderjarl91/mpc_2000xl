@@ -104,7 +104,6 @@ h3 {
 }
 
 .pads > div {
-  background-color: yellow;
   display: inline-block;
 }
 
@@ -187,7 +186,9 @@ h3 {
 }
 
 .modalText {
-  max-width: 30rem;
+  margin: 0 auto;
+  max-width: 31rem;
+  text-align: left;
 }
 
 .close {

@@ -42,91 +42,76 @@ window.addEventListener("load", () => {
   pads.forEach((pad, index) => {
     window.addEventListener("keydown", function (e) {
       if (e.key === "q") {
-        sounds[0].currentTime = 0;
         sounds[0].play();
         pads[0].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[0].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
-        }, 300);
       }
       if (e.key === "w") {
-        sounds[1].currentTime = 0;
         sounds[1].play();
         pads[1].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[1].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
       }
       if (e.key === "e") {
-        sounds[2].currentTime = 0;
         sounds[2].play();
-
         pads[2].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[2].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
       }
       if (e.key === "r") {
-        sounds[3].currentTime = 0;
         sounds[3].play();
-
         pads[3].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[3].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
       }
       if (e.key === "t") {
-        sounds[4].currentTime = 0;
         sounds[4].play();
-
         pads[4].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[4].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
       }
       if (e.key === "y") {
-        sounds[5].currentTime = 0;
         sounds[5].play();
-
         pads[5].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[5].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
       }
       if (e.key === "u") {
-        sounds[6].currentTime = 0;
         sounds[6].play();
-
         pads[6].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[6].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
       }
       if (e.key === "i") {
-        sounds[7].currentTime = 0;
         sounds[7].play();
-
         pads[7].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[7].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
       }
-      if (e.key === "b") {
-        sounds[7].currentTime = 0;
-        sounds[7].play();
-
-        pads[7].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-        setTimeout(function () {
-          pads[7].style.backgroundColor = "rgba(0, 0, 0, 0)";
-        }, 300);
+      if (e.key === "a") {
+        sounds[8].play();
+        pads[8].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
       }
-      console.log(e);
+      if (e.key === "s") {
+        sounds[9].play();
+        pads[9].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      }
+      if (e.key === "d") {
+        sounds[10].play();
+        pads[10].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      }
+      if (e.key === "f") {
+        sounds[11].play();
+        pads[11].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      }
+      if (e.key === "g") {
+        sounds[12].play();
+        pads[12].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      }
+      if (e.key === "h") {
+        sounds[13].play();
+        pads[13].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      }
+      if (e.key === "j") {
+        sounds[14].play();
+        pads[14].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      }
+      if (e.key === "k") {
+        sounds[15].play();
+        pads[15].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+      }
 
+      //play backing track with spacebar
       if (e.key === " ") {
         if (song.paused === true) {
           song.currentTime = 0;
           song.play();
-          playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+          playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
           setTimeout(function () {
             playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
           }, 300);
@@ -136,6 +121,98 @@ window.addEventListener("load", () => {
         ///song.paused === false {
         //song.paused()
         //}
+      }
+    });
+  });
+});
+
+//STOP SOUND WHEN KEY RELEASED
+window.addEventListener("load", () => {
+  const sounds = document.querySelectorAll(".sound"); //This makes an array
+  const pads = document.querySelectorAll(".pads > div");
+  console.log(sounds);
+
+  pads.forEach((pad, index) => {
+    window.addEventListener("keyup", function (e) {
+      if (e.key === "q") {
+        sounds[0].pause();
+        sounds[0].currentTime = 0;
+        pads[0].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "w") {
+        sounds[1].pause();
+        sounds[1].currentTime = 0;
+        pads[1].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "e") {
+        sounds[2].pause();
+        sounds[2].currentTime = 0;
+        pads[2].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "r") {
+        sounds[3].pause();
+        sounds[3].currentTime = 0;
+        pads[3].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "t") {
+        sounds[4].pause();
+        sounds[4].currentTime = 0;
+        pads[4].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "y") {
+        sounds[5].pause();
+        sounds[5].currentTime = 0;
+        pads[5].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "u") {
+        sounds[6].pause();
+        sounds[6].currentTime = 0;
+        pads[6].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "i") {
+        sounds[7].pause();
+        sounds[7].currentTime = 0;
+        pads[7].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "a") {
+        sounds[8].pause();
+        sounds[8].currentTime = 0;
+        pads[8].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "s") {
+        sounds[9].pause();
+        sounds[9].currentTime = 0;
+        pads[9].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "d") {
+        sounds[10].pause();
+        sounds[10].currentTime = 0;
+        pads[10].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "f") {
+        sounds[11].pause();
+        sounds[11].currentTime = 0;
+        pads[11].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "g") {
+        sounds[12].pause();
+        sounds[12].currentTime = 0;
+        pads[12].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "h") {
+        sounds[13].pause();
+        sounds[13].currentTime = 0;
+        pads[13].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "j") {
+        sounds[14].pause();
+        sounds[14].currentTime = 0;
+        pads[14].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+      }
+      if (e.key === "k") {
+        sounds[15].pause();
+        sounds[15].currentTime = 0;
+        pads[15].style.backgroundColor = "rgba(0, 0, 0, 0.0)";
       }
     });
   });
