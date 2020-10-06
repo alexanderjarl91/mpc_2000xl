@@ -21,16 +21,29 @@ window.addEventListener("load", () => {
 
 //KEYBOARD ASSIGNMENTS
 
-const keys = {
-  q: 0,
-  w: 1,
-};
-window.addEventListener("keydown", (e) => {
-  // Check if pressed key is one of the
-  // available properties in "keys"
-  if (e.key in keys) {
-    const indexOption = keys[e.key];
-    sounds[indexOption].play();
+//SPACE BAR TOGGLE PLAY/PAUSE
+function togglePause() {
+  if (song.paused && song.currentTime > 0) {
+    song.play();
+    playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    setTimeout(function () {
+      playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    }, 300);
+    playLight.style.display = "block";
+  } else {
+    song.pause();
+    song.currentTime = 0.01;
+    playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    setTimeout(function () {
+      playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    }, 300);
+    playLight.style.display = "none";
+  }
+}
+
+window.addEventListener("keydown", function (x) {
+  if (x.key === " ") {
+    togglePause();
   }
 });
 
@@ -104,23 +117,6 @@ window.addEventListener("load", () => {
       if (e.key === "k") {
         sounds[15].play();
         pads[15].style.backgroundColor = "rgba(0, 0, 0, 0.3)";
-      }
-
-      //play backing track with spacebar
-      if (e.key === " ") {
-        if (song.paused === true) {
-          song.currentTime = 0;
-          song.play();
-          playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-          setTimeout(function () {
-            playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
-          }, 300);
-          //SHOW GREEN LIGHT
-          playLight.style.display = "block";
-        } //else if {
-        ///song.paused === false {
-        //song.paused()
-        //}
       }
     });
   });
@@ -218,8 +214,9 @@ window.addEventListener("load", () => {
   });
 });
 
-// PLAY BUTTON FUNCTION
+// PLAY BUTTON CLICK FUNCTION
 let song = document.getElementById("song");
+song.currentTime = 0.01;
 let playBtn = document.getElementById("playBtn");
 var playLight = document.getElementById("playLight");
 playLight.style.display = "none"; //playLight default display is off.
