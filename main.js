@@ -26,33 +26,6 @@ window.addEventListener("load", () => {
 });
 
 //KEYBOARD ASSIGNMENTS
-
-//SPACE BAR TOGGLE PLAY/PAUSE
-function togglePause() {
-  if (song.paused && song.currentTime > 0) {
-    song.play();
-    playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-    setTimeout(function () {
-      playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
-    }, 300);
-    playLight.style.display = "block";
-  } else {
-    song.pause();
-    song.currentTime = 0.01;
-    playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-    setTimeout(function () {
-      playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
-    }, 300);
-    playLight.style.display = "none";
-  }
-}
-
-window.addEventListener("keydown", function (x) {
-  if (x.key === " ") {
-    togglePause();
-  }
-});
-
 window.addEventListener("load", () => {
   const sounds = document.querySelectorAll(".sound"); //This makes an array
   const pads = document.querySelectorAll(".pads > div");
@@ -126,6 +99,32 @@ window.addEventListener("load", () => {
       }
     });
   });
+});
+
+//SPACE BAR TOGGLE PLAY/PAUSE
+function togglePause() {
+  if (song.paused && song.currentTime > 0) {
+    song.play();
+    playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    setTimeout(function () {
+      playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    }, 300);
+    playLight.style.display = "block";
+  } else {
+    song.pause();
+    song.currentTime = 0.01;
+    playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    setTimeout(function () {
+      playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    }, 300);
+    playLight.style.display = "none";
+  }
+}
+
+window.addEventListener("keydown", function (x) {
+  if (x.key === " ") {
+    togglePause();
+  }
 });
 
 //STOP SOUND WHEN KEY RELEASED
@@ -232,7 +231,7 @@ playBtn.addEventListener("click", function () {
   song.currentTime = 0;
   song.play();
   //USER FEEDBACK
-  playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+  playBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
   setTimeout(function () {
     playBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
   }, 300);
@@ -247,7 +246,7 @@ stopBtn.addEventListener("click", function () {
   //STOP SOUND
   song.pause();
   //USER FEEDBACK
-  stopBtn.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+  stopBtn.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
   setTimeout(function () {
     stopBtn.style.backgroundColor = "rgba(0, 0, 0, 0)";
   }, 300);

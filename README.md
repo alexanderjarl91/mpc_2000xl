@@ -12,3 +12,7 @@ DOM Manipulation:
 This web app uses javascript DOM manipulation. Alot of DOM elements are manipulated in some way; hide them, showsthem, play them for example. Some elements are animated to appear and move. The app also contains event listeners like load, click and keydown. It also iterates through DOM collections and makes an array out of them, like the sounds array. There are also alot timing events.
 
 It doesnt contain the project requirement of a loading screen, clock or option to go back as I did not see it fit well with my idea.
+
+UPDATE v1.1 (7/10/20, 15:00)
+<1> pads now work on mobile</1>
+<2> mobile style responsiveness fixed, still needs work</2>

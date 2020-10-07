@@ -69,13 +69,14 @@ p {
   text-align: center;
   align-items: center;
   margin: 0 auto;
-  max-height: 50px;
 }
 
 .mpc {
   position: relative;
   transition: opacity 1s ease-out, transform 2s ease-out;
   opacity: 0;
+  width: 100vh;
+  height: 100vh;
 }
 
 h3 {
@@ -83,27 +84,30 @@ h3 {
   font-family: "Press Start 2P", cursive;
   font-size: 0.3rem;
   color: white;
-  top: 20%;
-  left: 28.9%;
+  top: 16.7%;
+  left: 30%;
 }
 
 .mpc img {
   width: 100%;
   height: auto;
+  z-index: -1;
 }
 
 .pads {
+  z-index: 2;
   position: absolute;
-  top: 39.9%;
+  top: 32.7%;
   left: 56.9%;
-  width: 28%;
-  height: 34%;
+  width: 28.3%;
+  height: 28.3%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 4%;
 }
 
 .pads > div {
+  opacity: 0.5;
   display: inline-block;
 }
 
@@ -112,13 +116,12 @@ h3 {
 }
 
 .playBtn {
-  height: 2.5%;
-  width: 2.8%;
-  /* margin-top: 18.1rem;
-    margin-right: 10.7rem; */
+  opacity: 0.5;
+  height: 2.2%;
+  width: 3.1%;
   position: absolute;
-  top: 73%;
-  left: 36.5%;
+  top: 60.2%;
+  left: 36.4%;
 }
 .playBtn:hover {
   cursor: pointer;
@@ -126,18 +129,19 @@ h3 {
 
 .playLight {
   position: relative;
-  top: -100%;
-  left: -40%;
+  top: -120%;
+  left: -30%;
 }
 
 .stopBtn {
-  height: 2.6%;
-  width: 3%;
+  opacity: 0.5;
+  height: 2.3%;
+  width: 3.1%;
   /* margin-top: 18.1rem;
     margin-right: 10.7rem; */
   position: absolute;
-  top: 73%;
-  left: 31.8%;
+  top: 60.1%;
+  left: 31.68%;
 }
 
 .stopBtn {
@@ -209,13 +213,12 @@ h3 {
 
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: 3rem;
   width: 100%;
   display: block;
-  margin-bottom: 2rem;
   margin-top: 2rem;
+  z-index: -3;
 }
-
 .footer p {
   font-size: 10px;
 }
@@ -246,7 +249,7 @@ h3 {
   }
 
   .myBtn {
-    margin-top: 2rem;
+    margin-top: -25rem;
     left: 38%;
   }
 
@@ -256,6 +259,27 @@ h3 {
   }
   .mpc {
     margin-top: 10rem;
+    width: 100%;
+  }
+  .pads {
+    top: 16.4%;
+    height: 14.1%;
+  }
+  .pads > div {
+    width: 96%;
+  }
+  h3 {
+    top: 8.3%;
+    left: 27%;
+    font-size: 4px;
+  }
+  .playBtn {
+    top: 30%;
+    height: 1.2%;
+  }
+  .stopBtn {
+    top: 30%;
+    height: 1.2%;
   }
 }
 
