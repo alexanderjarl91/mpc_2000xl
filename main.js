@@ -16,6 +16,12 @@ window.addEventListener("load", () => {
       }, 300);
       //    EÐA sounds[index].duration)
     });
+
+    pad.addEventListener("touchstart", f);
+    function f(ev) {
+      console.log(ev.touches);
+      sounds[index].play();
+    }
   });
 });
 
