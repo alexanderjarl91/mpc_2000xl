@@ -263,7 +263,7 @@ const intro = document.querySelector(".intro");
 setTimeout(function () {
   h1.style.opacity = "1";
   setTimeout(function () {
-    h1.style.transform = "translateY(-20rem)";
+    h1.style.transform = "translateY(-15rem)";
   }, 2000);
 }, 0);
 
@@ -271,7 +271,7 @@ setTimeout(function () {
 setTimeout(function () {
   h2.style.opacity = "1";
   setTimeout(function () {
-    h2.style.transform = "translateY(-20rem)";
+    h2.style.transform = "translateY(-15rem)";
   }, 1530);
 }, 498);
 
@@ -291,7 +291,7 @@ tryBtn.addEventListener("click", function () {
   mpc.style.display = "block";
   setTimeout(function () {
     mpc.style.opacity = "1";
-    mpc.style.transform = "translateY(-24rem)";
+    mpc.style.transform = "translateY(-16rem)";
   }, 100);
 });
 

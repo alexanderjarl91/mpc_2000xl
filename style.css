@@ -11,24 +11,30 @@
   }
 }
 
+body {
+  overflow: hidden;
+}
+
 /* HEADER */
 .headerTxt {
   text-align: center;
 }
 h1 {
   font-family: "Press Start 2P", cursive;
-  font-size: 3rem;
-  margin-top: 25rem;
+  font-size: 2rem;
+  margin-top: 20rem;
   margin-bottom: 0;
-
   opacity: 0;
   transition: opacity 1s ease-out, transform 2s ease-out;
 }
 
 h2 {
   font-family: "Press Start 2P", cursive;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  max-width: 300px;
+  margin: 0 auto;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   opacity: 0;
   transition: opacity 1s ease-out, transform 2s ease-out;
 }
@@ -37,27 +43,31 @@ h2 {
 .intro {
   max-width: 25rem;
   margin: 0 auto;
-  margin-top: -10rem;
-
+  margin-top: -12rem;
   opacity: 0;
-  transition: opacity 2s;
+  width: 80%;
+  max-width: 600px;
+  line-height: 20px;
+  text-align: center;
 }
 
 p {
   font-family: "Press Start 2P", cursive;
   font-size: 1rem;
   text-align: center;
+  font-size: 12px;
 }
 
 .try {
   font-family: "Press Start 2P", cursive;
-  margin: 2rem 5rem;
+  margin-top: 2rem;
   border: none;
   background: lightgray;
+  padding: 8px;
 }
 
 .try:hover {
-  background: lightgray;
+  background: grey;
   cursor: pointer;
 }
 
@@ -69,14 +79,16 @@ p {
   text-align: center;
   align-items: center;
   margin: 0 auto;
+  max-width: 700px;
 }
 
 .mpc {
   position: relative;
   transition: opacity 1s ease-out, transform 2s ease-out;
   opacity: 0;
-  width: 100vh;
-  height: 100vh;
+  /* width: 100%; */
+  height: 100%;
+  max-width: 700px;
 }
 
 h3 {
@@ -84,29 +96,44 @@ h3 {
   font-family: "Press Start 2P", cursive;
   font-size: 0.3rem;
   color: white;
-  top: 16.7%;
-  left: 30%;
+  top: 20%;
+  left: 26%;
+  z-index: 99;
+  color: white;
+  background: none;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 0.3rem;
+    left: 29%;
+  }
 }
 
 .mpc img {
-  width: 100%;
+  width: 100vw;
+  left: 50%;
   height: auto;
   z-index: -1;
+  user-select: none;
+  max-width: 700px;
 }
 
 .pads {
+  /* background-color: tomato; */
+  opacity: 0.5;
   z-index: 2;
   position: absolute;
-  top: 32.7%;
+  top: 39.4%;
   left: 56.9%;
-  width: 28.3%;
-  height: 28.3%;
+  width: 28.4%;
+  height: 34.2%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 4%;
 }
 
 .pads > div {
+  /* background-color: green; */
   opacity: 0.5;
   display: inline-block;
 }
@@ -116,12 +143,14 @@ h3 {
 }
 
 .playBtn {
-  opacity: 0.5;
-  height: 2.2%;
-  width: 3.1%;
   position: absolute;
-  top: 60.2%;
-  left: 36.4%;
+  border-radius: 1px;
+  opacity: 0.7;
+  height: 2.7%;
+  width: 3.2%;
+  top: 72.6%;
+  left: 36.3%;
+  background-color: tomato;
 }
 .playBtn:hover {
   cursor: pointer;
@@ -132,31 +161,46 @@ h3 {
   top: -120%;
   left: -30%;
 }
+.playLight2 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  border-radius: 5px;
+  opacity: 0.8;
+  background-color: lime;
+  top: 71%;
+  left: 36.94%;
+  box-shadow: 1px 1px 0px 1px rgba(32, 252, 43, 0.3);
+}
 
+@media (min-width: 580px) {
+  .playLight2 {
+    top: 71.2%;
+    padding: 1px;
+  }
+}
 .stopBtn {
   opacity: 0.5;
-  height: 2.3%;
-  width: 3.1%;
-  /* margin-top: 18.1rem;
-    margin-right: 10.7rem; */
+  height: 2.7%;
+  width: 3.2%;
+
   position: absolute;
-  top: 60.1%;
+  top: 72.6%;
   left: 31.68%;
-}
-
-.stopBtn {
   cursor: pointer;
+  /* background-color: green; */
 }
 
-/* MODAL STUFF */
+/* MODAL */
 
 .myBtn {
   position: absolute;
-  top: 90%;
-  left: 42%;
+  top: 95%;
+  left: calc(50% - 70px);
   border: none;
   font-family: "Press Start 2P", cursive;
   font-size: 10px;
+  padding: 20px;
 }
 .myBtn:hover {
   background-color: lightgray;
@@ -186,7 +230,8 @@ h3 {
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  width: 80%;
+  max-width: 600px;
 }
 
 .modalText {
@@ -210,7 +255,6 @@ h3 {
 }
 
 /* FOOTER */
-
 .footer {
   position: fixed;
   bottom: 3rem;
@@ -221,70 +265,5 @@ h3 {
 }
 .footer p {
   font-size: 10px;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-family: "Press Start 2P", cursive;
-    font-size: 30px;
-    margin-top: 25rem;
-    margin-bottom: 0;
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 2s ease-out;
-  }
-
-  h2 {
-    font-size: 6px;
-  }
-
-  .intro {
-    margin: 0 auto;
-  }
-
-  .intro p {
-    max-width: 12rem;
-    font-size: 10px;
-    margin: 0 auto;
-    margin-top: -18rem;
-  }
-
-  .myBtn {
-    margin-top: -25rem;
-    left: 38%;
-  }
-
-  .try {
-    font-size: 10px;
-    margin-left: 7rem;
-  }
-  .mpc {
-    margin-top: 10rem;
-    width: 100%;
-  }
-  .pads {
-    top: 16.4%;
-    height: 14.1%;
-  }
-  .pads > div {
-    width: 96%;
-  }
-  h3 {
-    top: 8.3%;
-    left: 27%;
-    font-size: 4px;
-  }
-  .playBtn {
-    top: 30%;
-    height: 1.2%;
-  }
-  .stopBtn {
-    top: 30%;
-    height: 1.2%;
-  }
-}
-
-@media (max-height: 510px) {
-  .footer {
-    display: none;
-  }
+  line-height: 16px;
 }
