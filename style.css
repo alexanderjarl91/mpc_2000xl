@@ -150,7 +150,7 @@ h3 {
   width: 3.2%;
   top: 72.6%;
   left: 36.3%;
-  background-color: tomato;
+  /* background-color: tomato; */
 }
 .playBtn:hover {
   cursor: pointer;
